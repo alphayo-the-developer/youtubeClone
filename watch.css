@@ -1,0 +1,148 @@
+
+
+#watch_main_container {
+    width: 95%;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    overflow: hidden;
+    background-color: rgb(247, 241, 241);
+    display: grid;
+    grid-template-columns: 50% 36%;
+    gap: 30px;
+
+}
+
+/* start left */
+
+#video {
+    height: 70vh;
+    width: 100%;
+    padding: 0px;;
+}
+
+#watch_video_title {
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+
+
+
+
+
+/* end left */
+
+
+
+/* start right */
+
+
+/* start recommened video */
+
+.watch_video {
+    /* width: 90%; */
+    height: 15vh;
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+}
+
+.watch_video_duration {
+    position: absolute;
+    left: 85px;
+    top: 50px;
+    font-size: 11px;
+    background-color: rgb(10, 10, 10);
+    z-index: 1;
+    text-align: center;
+    padding: 3px;
+    color: #fff;
+}
+
+.watch_video_thumbnail {
+    height: 100%;
+    width: 120px;
+}
+
+.watch_video_title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 14px;
+    max-width: 80%;
+}
+
+.watch_video_text {
+    margin-left: 30px;
+    font-size: 13px;
+}
+
+.watch_video_info {
+    display: flex;
+    padding-top: 2px;
+}
+
+
+
+/* end recommened video */
+
+/* start corousel */
+
+#watch_corousel_container {
+    height: 6vh;
+    max-width: 90%;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    /* text-align: center; */
+}
+
+#watch_corousel{
+    display: flex;
+}
+
+
+#watch_corousel p{
+    border-radius: 30px;
+    min-width: 85px;
+    height: 3vh;
+    background-color: rgb(211, 208, 208);
+    text-align: center;
+    padding: 5px 5px;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#watch_first_tag{
+
+}
+
+#watch_corousel_arrow_containner {
+    position: relative;
+    height: 24px;
+    width: 20px;
+    top: -20px;
+    left: 320px;
+    background-color: #fff;
+    transform: translateY(-5px);
+    text-align: center;
+}
+
+#watch_corousel_arrow {
+    width: 70%;
+    height: 70%;   
+    transform: translateY(5px);
+    cursor: pointer;
+}
+
+/* end corousel */
+
+
+
+/* end right */
+
