@@ -1,16 +1,203 @@
 .subscription_main_container{
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 70% 35%;
     width: 80%;
     margin-left: 10vw;
     margin-top: 15vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .subscription_content {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+    
 }
+
+.history{
+    
+}
+
+.history_menu{
+    display: flex;
+}
+
+.history_icon{
+    width: 20px;
+    height: 20px;
+}
+
+.history_text{
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.see{
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(1, 1, 61);
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.history_videos{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.channel_content{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.channel_info{
+    width: 200px;
+}
+
+.library_thumbnail{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 30%;
+}
+
+.library_channel_name{
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.channel_statistics{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+
+.channel_statistics_info {
+    width: 200px;
+}
+
+.num {
+    margin-left: auto;
+}
+
+.channel_statistics_subscription{
+    display: flex;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+}
+
+.channel_statistics_uploads {
+    display: flex;
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+}
+
+.channel_statistics_likes {
+    display: flex;
+    margin-top: 15px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: rgb(71, 71, 71);
+}
+
+/* watch later */
+
+.watch_later{
+    margin-top: 30px;
+}
+
+.vid_number {
+    margin-left: 10px;
+    color: rgb(71, 71, 71);
+}
+
+/* end of watch later */
+
+/* playlist */
+
+.playlist_icon{
+    width: 10px;
+    height: 10px;
+    margin-left: 7px;
+}
+
+.added {
+    margin-left: 35px;
+}
+
+
+.play {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background:  black;
+    /* opacity: .5; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    /* background-color: ; */
+}
+
+.play:hover {
+    width: 100%;
+    left: 0;
+}
+
+.play p {
+    margin-bottom: 5px;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.play img {
+    opacity: 1;
+}
+
+
+.last_updated {
+
+}
+
+.privacy{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.privacy_icon{
+    width: 17px;
+    height: 17px;
+}
+
+.view_playlist {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(63, 62, 62);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.plalist_show {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(63, 62, 62);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* end of playlist */
 
 /* start trending_video */
 
@@ -19,13 +206,13 @@
     height: 250px;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
     position: relative;
 }
 
 .subscription_video_duration {
     position: absolute;
-    left: 150px;
+    left: 130px;
     top: 90px;
     font-size: 13px;
     background-color: rgb(10, 10, 10);
@@ -79,3 +266,30 @@
 
 
 /* end trending_video */
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 576px){
+    .subscription_main_container{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin-left: 15px;
+        margin-top: 70px;
+        /* overflow: hidden; */
+    }
+    .subscription_content {
+        
+    }
+    .channel_content {
+        grid-row-start: 1;
+        margin: auto;
+        margin-bottom: 30px;
+
+    }
+
+    .history_videos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

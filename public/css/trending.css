@@ -75,3 +75,40 @@
 
 
 /* end trending_video */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 576px){
+    #trending_main_container {
+        width: 90%;
+        margin-top: 70px;
+        margin-left: 15px;
+    }
+    #trending_large_icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 70px;
+        row-gap: 20px;
+    }
+    .trending_video {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .trending_video_thumbnail {
+        height: 50%;
+    }
+    .trending_video_duration {
+        position: absolute;
+        left: 230px;
+        top: 150px;
+        font-size: 13px;
+        background-color: rgb(10, 10, 10);
+        z-index: 1;
+        text-align: center;
+        padding: 3px;
+        color: #fff;
+    }
+    .trending_video_info p{
+        padding-right: 5px;
+    }
+}

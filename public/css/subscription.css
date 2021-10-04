@@ -116,3 +116,27 @@
 
 
 /* end trending_video */
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 576px){
+    .subscription_main_container {
+        width: 80%;
+        margin-left: 20px;
+        margin-top: 70px; 
+    }
+    .subscription_content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .subscription_video_duration {
+        position: absolute;
+        left: 200px;
+        top: 90px;
+        font-size: 13px;
+        background-color: rgb(10, 10, 10);
+        z-index: 1;
+        text-align: center;
+        padding: 3px;
+        color: #fff;
+    }
+}

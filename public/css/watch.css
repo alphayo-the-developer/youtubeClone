@@ -188,6 +188,7 @@
 .comment{
     display: flex;
     margin-top: 30px;
+    position: relative;
 }
 
 .comment_thumbnail{
@@ -254,6 +255,11 @@
 .comment_icon {
     width: 10px;
     height: 10px;
+}
+
+.replies .comment_thumbnail{
+    width: 25px;
+    height: 25px;
 }
 
 
@@ -374,3 +380,48 @@
 
 /* end right */
 
+/* MEDIA QUERIES */
+@media screen and (max-width: 576px){
+
+    #watch_main_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+    #watch_corousel_container {
+        display: none;
+    }
+    #watch_left {
+        width: 80vw;
+    }
+    #video {
+        height: 30vh;
+        width: 100%;
+        padding: 0px;
+    }
+    .watch_video_info1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .watch_video_info_data {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+    .watch_video_icons {
+        width: 70%;
+        grid-column-start: 1;
+    }
+
+    .watch_video_duration {
+        position: absolute;
+        left: 85px;
+        top: 80px;
+        font-size: 11px;
+        background-color: rgb(10, 10, 10);
+        z-index: 1;
+        text-align: center;
+        padding: 3px;
+        color: #fff;
+    }
+
+}

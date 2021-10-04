@@ -1,17 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscriptions</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/subscription.css">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>trending</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/trending.css">
+    </head>
+    <body>
 
-</head>
-<body>
-        <!-- start side menu -->       
-        <div id="side_menu">
+         <!-- start side menu -->
+         <!-- <div id="side_menu">
+            <div id="side_menu_home">
+                <img src="/img/camera-retro.png" alt="">
+                <p>home</p>
+            </div>
+            <div id="side_menu_trending">
+                <img src="/img/camera-retro.png" alt="">
+                <p>trending</p>
+            </div>
+            <div id="side_menu_subscription">
+                <img src="/img/camera-retro.png" alt="">
+                <p>subscriptions</p>
+            </div>
+            <div id="side_menu_library">
+                <img src="/img/camera-retro.png" alt="">
+                <p>library</p>
+            </div>
+        </div> -->
+
+        <!-- end side menu -->
+
+         <!-- start side menu -->       
+         <div id="side_menu">
             <div id="side_menu_home">
                 <img src="/img/camera-retro.png" alt="">
                 <a href="/home" id="home_link">home</a>
@@ -149,12 +172,10 @@
 
         <!-- end side nav -->
 
-        <!-- start modal -->
-        <div id="modal"></div>
-        <!-- end modal -->
 
-         <!-- start navbar -->
-         <nav id="nav">
+
+        <!-- start navbar -->
+        <nav id="nav">
             <div id="nav_right">
                 <img src="img/reorder-option.png" alt="" class="logo_menu nav_icons" id="humberger">
                 <div id="logo">
@@ -182,71 +203,68 @@
 
         <!-- end navbar -->
 
+        <!-- start modal -->
+            <div id="modal"></div>
+        <!-- end modal -->
 
-        <div class="subscription_main_container">
+        <!-- start trending main container -->
 
-            <div class="subscription_manager">
-                <p class="subscription_today">today</p>
-                <div class="subscription_icons">
-                    <p>manage</p>
-                    <img src="img/nine-black-tiles.png" alt="" class="subscription_icon">
-                    <img src="img/nine-black-tiles.png" alt="" class="subscription_icon">
+        <div id="trending_main_container">
+
+            <div id="trending_large_icons">
+                <div id="music">
+                    <img src="/img/earth-globe.png" alt="">
+                    <h4>music</h4>
                 </div>
-
+                <div id="music">
+                    <img src="/img/earth-globe.png" alt="">
+                    <h4>gaming</h4>
+                </div>
+                <div id="music">
+                    <img src="/img/earth-globe.png" alt="">
+                    <h4>news</h4>
+                </div>
+                <div id="music">
+                    <img src="/img/earth-globe.png" alt="">
+                    <h4>movies</h4>
+                </div>
             </div>
-            <!-- <div class="subscription_channel">
-                <img src="/img/background-618226__340.webp" alt="" class="subscription_channel_thumbnail">
-                <p class="subscription_channel_title">Global Mountain Bike Network</p>
-            </div> -->
-
-            <div class="subscription_content">
-
-                <div class="subscription_video">
-                    <img src="/img/kiKoprGLT.jpg" alt="" class="subscription_video_thumbnail">
-                    <div class="subscription_video_duration">10:23</div>
-                    <div class="subscription_video_text">
-                        <div class="subscription_video_title">Lorem, ipsum dolor sit amet consectetur ...</div>
-                        <p class="subscription_video_channel">bensoul</p>
-                        <div class="subscription_video_info">
-                            <p class="subscription_video_viwes">422k views</p>
-                            <p class="subscription_video_age" >1 day ago</p>
-                        </div>
-                        <!-- <div class="subscription_video_descriptipn">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>
-                        </div> -->
-                        <div class="subscription_reminder_button">
-                            <button>set reminder</button>
-                        </div>
+            <div id="trending_border_btm"></div>
+            <div class="trending_video">
+                <img src="/img/kiKoprGLT.jpg" alt="" class="trending_video_thumbnail">
+                <div class="trending_video_duration">10:23</div>
+                <div class="trending_video_text">
+                    <div class="trending_video_title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores ut repellendus qui iste, ab ipsu</div>
+                    <div class="trending_video_info">
+                        <p class="trending_video_channel">bensoul</p>
+                        <p class="trending_video_viwes">422k views</p>
+                        <p class="trending_video_age" >1 day ago</p>
+                    </div>
+                    <div class="trending_video_descriptipn">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>
                     </div>
                 </div>
-
-                <div class="subscription_video">
-                    <img src="/img/kiKoprGLT.jpg" alt="" class="subscription_video_thumbnail">
-                    <div class="subscription_video_duration">10:23</div>
-                    <div class="subscription_video_text">
-                        <div class="subscription_video_title">Lorem, ipsum dolor sit amet consectetur ...</div>
-                        <p class="subscription_video_channel">bensoul</p>
-                        <div class="subscription_video_info">
-                            <p class="subscription_video_viwes">422k views</p>
-                            <p class="subscription_video_age" >1 day ago</p>
-                        </div>
-                        <!-- <div class="subscription_video_descriptipn">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>
-                        </div> -->
-                        <div class="subscription_reminder_button">
-                            <button>set reminder</button>
-                        </div>
+            </div>
+            <div class="trending_video">
+                <img src="/img/kiKoprGLT.jpg" alt="" class="trending_video_thumbnail">
+                <div class="trending_video_duration">10:23</div>
+                <div class="trending_video_text">
+                    <div class="trending_video_title">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores ut repellendus qui iste, ab ipsu</div>
+                    <div class="trending_video_info">
+                        <p class="trending_video_channel">bensoul</p>
+                        <p class="trending_video_viwes">422k views</p>
+                        <p class="trending_video_age" >1 day ago</p>
+                    </div>
+                    <div class="trending_video_descriptipn">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>
                     </div>
                 </div>
-  
             </div>
-            
-
+                   
         </div>
-
-
-
-        <script src="/js/main.js" async defer></script>
-
-</body>
+        
+        <!-- end trending main container -->
+        
+        <script src="/js/main.js"  defer></script>
+    </body>
 </html>
