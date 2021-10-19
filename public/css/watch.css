@@ -109,6 +109,9 @@
 
 .channel_title{
     font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 .channel_subscribers{
@@ -125,6 +128,7 @@
     height: 35px;
     outline: none;
     border: none;
+    cursor: pointer;
 }
 
 .description{
@@ -159,6 +163,7 @@
 .add_comment{
     margin-top: 20px;
     display: flex;
+    width: 100%;
 }
 
 .add_comment img{
@@ -169,17 +174,31 @@
 
 .add_comment input {
     background-color: #fff;
-    width: 50%;
+    width: 60%;
     outline: none;
     border: none;
     margin-left: 14px;
+    padding: 12px;
+    font-size: 0.9rem;
 }
 
 .add_comment input::placeholder{
     color: black;
 }
 
+.add_comment_form {
+    width: 100%;
+}
 
+.add_comment_btn {
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    padding: 12px;
+    background-color: #bc0004;
+    color: #fff;
+    cursor: pointer;
+}
 
 .comments {
     margin-top: 25px;
@@ -242,6 +261,42 @@
     border: none;
     margin-left: 35px;
     cursor: pointer;
+}
+
+.reply_form {
+    display: none;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.show_reply {
+    display: flex;
+}
+
+.reply_input {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #2a2a2a;
+    padding: 5px;
+}
+
+.reply_submit {
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin-left: 5px;
+    background-color: #bc0004;
+    color: #fff;
+    cursor: pointer;
+}
+
+.replies {
+    display: none;
+}
+
+.show {
+    display: block;
+    transition: 3s;
 }
 
 .replies_btn {

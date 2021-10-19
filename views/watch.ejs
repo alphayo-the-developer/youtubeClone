@@ -405,7 +405,9 @@
                 <div class="channel_info">
                     <img src="/img/art-2472892__340.webp" alt="" class="channel_thumbnail">
                     <div class="channel_data">
-                        <p class="channel_title">CasanovaGames</p>
+                        <form action="/channel" method="get">
+                            <button class="channel_title" type="submit">CasanovaGames</button>
+                        </form>
                         <p class="channel_subscribers">489k subscribers </p>
                     </div>
                     <button class="subscribe_btn">subscribe</button>
@@ -422,7 +424,10 @@
                 </div>
                 <div class="add_comment">
                     <img src="/img/background-618226__340.webp" alt="">
-                    <input type="text" placeholder="Add a public comment...">
+                    <form action="" class="add_comment_form">
+                        <input type="text" placeholder="Add a public comment...">
+                        <button class="add_comment_btn">comment</button>
+                    </form>
                 </div>
                 <div class="comments">
                     <div class="comment">
@@ -441,8 +446,12 @@
                                 </div>
                                 <button >REPLY</button>
                             </div>
-                            <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button>
-                            <div class="replies">
+                            <form action="" class="reply_form">
+                                <input type="text" class="reply_input">
+                                <input type="submit" value="Reply" class="reply_submit">
+                            </form>
+                            <button class="replies_btn" id="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View 2 Reply</button>
+                            <div class="replies" id="replies">
                                 <div class="comment">
                                     <img src="/img/background-618226__340.webp" alt="" class="comment_thumbnail">
                                     <div class="comment_data">
@@ -458,7 +467,12 @@
                                                 <!-- <p>592</p> -->
                                             </div>
                                             <button class="comment_reply" >REPLY</button>
+                                            
                                         </div>
+                                        <form action="" class="reply_form">
+                                            <input type="text" class="reply_input">
+                                            <input type="submit" value="Reply" class="reply_submit">
+                                        </form>
                                         <!-- <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button> -->
                                     </div>
                                 </div>
@@ -482,6 +496,27 @@
                                 <button >REPLY</button>
                             </div>
                             <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button>
+                            <div class="replies" id="replies">
+                                <div class="comment">
+                                    <img src="/img/background-618226__340.webp" alt="" class="comment_thumbnail">
+                                    <div class="comment_data">
+                                        <p class="comment_user">maccc Bumblebee <span class="comment_date">1 year ago</span></span></p>
+                                        <p class="comment_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, eveniet nesciunt. Eos quis sed impedit, sapiente nam voluptatum architecto sunt! Quasi dolore deserunt ad aspernatur non ducimus, aut asperiores optio.</p>
+                                        <div class="comment_interact">
+                                            <div class="comment_likes">
+                                                <img src="/img/thumbs-up-hand-symbol.png" alt="" class="icons">
+                                                <p>10</p>
+                                            </div>
+                                            <div class="comment_dislike">
+                                                <img src="/img/thumbs-down-silhouette.png" alt="" class="icons">
+                                                <!-- <p>592</p> -->
+                                            </div>
+                                            <button class="comment_reply" >REPLY</button>
+                                        </div>
+                                        <!-- <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
