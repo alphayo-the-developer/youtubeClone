@@ -118,7 +118,7 @@
 /* end trending_video */
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 576px){
+@media screen and (min-width: 576px){
     .subscription_main_container {
         width: 80%;
         margin-left: 20px;
@@ -130,7 +130,7 @@
     }
     .subscription_video_duration {
         position: absolute;
-        left: 200px;
+        left: 150px;
         top: 90px;
         font-size: 13px;
         background-color: rgb(10, 10, 10);
@@ -140,3 +140,15 @@
         color: #fff;
     }
 }
+
+/* @media screen and (min-width: 576px){
+    .subscription_content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .subscription_video_duration {
+        position: absolute;
+        left: 50px;
+        top: 90px;
+    }
+} */

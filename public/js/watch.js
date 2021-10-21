@@ -226,8 +226,27 @@ rep.forEach(function(el) {
     })
 })
 
+// show playlist
 
+const showPlaylist = () => {
+    const modal = document.getElementById('modal');
+    const popup = document.getElementById('playlist_pop');
+    const showBtn = document.getElementById('save');
+    const cancelBtn = document.getElementById('playlist_cancel');
+    showBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+        popup.style.display = 'flex';
+        popup.style.flexDirection = 'column';
+    });
 
+    cancelBtn.addEventListener('click', () => {
+        popup.style.display = 'none';
+        modal.style.display = 'none';
+        
+    })
+}
+
+showPlaylist();
 
 
 

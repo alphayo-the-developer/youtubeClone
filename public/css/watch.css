@@ -80,6 +80,13 @@
 .save{
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+.save button {
+    outline: none;
+    border: none;
+    cursor: pointer;
 }
 
 .likes p,.dislike p,.share p,.save p {
@@ -317,6 +324,69 @@
     height: 25px;
 }
 
+.playlist_pop {
+    background-color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 20%;
+    left: 40%;
+    width: 250px;
+    height: 300px;
+    z-index: 1000;
+    display: none;
+}
+
+.show_playlist_pop {
+    display: flex;
+    flex-direction: column;
+}
+
+.playlist_pop > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.playlist_pop_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.playlist_pop_header p {
+    text-transform: capitalize;
+}
+
+.playlist_pop_header button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.playlists {
+    overflow-y: auto;
+    height: 60vh;
+    border-bottom: 1px solid rgb(97, 95, 95);
+}
+
+.playlist {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+}
+
+/* .playlist:nth-of-type(1) {
+    margin-top: 15px;
+} */
+
+.create_playlist {
+    display: flex;
+    padding: 10px;
+}
+
+.create_playlist p {
+    text-transform: capitalize;
+    margin-left: 10px;
+}
 
 /* end left */
 

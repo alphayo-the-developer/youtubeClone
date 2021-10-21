@@ -10,177 +10,37 @@
 
 </head>
 <body>
-        <!-- start side menu -->       
-        <div id="side_menu">
-            <div id="side_menu_home">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/home" id="home_link">home</a>
-            </div>
-            <div id="side_menu_trending">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/trending" id="trending_link">trending</a>
-            </div>
-            <div id="side_menu_subscription">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/subscription" id="subscriptions_link">subscriptions</a>
-            </div>
-            <div id="side_menu_library">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/library" id="library_link">library</a>
-            </div>
-        </div>
+        <!-- start side menu -->
+
+        <%- include('./includes/sidemenu.ejs') %>
 
         <!-- end side menu -->
 
         <!-- start side nav -->
-        <div id="side_nav">
-            <section id="side_nav_logo">
-                <img src="img/reorder-option.png" alt="" id="side_nav_toggle">
-                <div id="side_nav_yt">
-                    <img src="img/youtube-logo.png" alt="" id="side_nav_img">
-                    <h2>youtube</h2>
-                </div>
-            </section>
-            <section id="menu">
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">home</p>
-                </div>
-                <div class="content">
-                    <img src="img/fluffy-cloud-silhouette.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">trending</p>
-                </div>
-                <div class="content">
-                    <img src="img/gittip-website-logo.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">subscription</p>
-                </div>
-            </section>
-            <section id="playlist">
-            <div class="content">
-                <img src="img/envelope.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">home</p>
-            </div>
-            <div class="content">
-                <img src="img/fluffy-cloud-silhouette.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">library</p>
-            </div>
-            <div class="content">
-                <img src="img/gittip-website-logo.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">your videos</p>
-            </div>
-            <div class="content">
-                <img src="img/envelope.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">watch later</p>
-            </div>
-            <div class="content">
-                <img src="img/fluffy-cloud-silhouette.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">war machines</p>
-            </div>
-            <div class="content">
-                <img src="img/angle-arrow-down.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">show more</p>
-            </div>
-            </section>
-            <section id="subscription">
-                <h3>subscription</h3>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/angle-arrow-down.png" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">show 498 more</p>
-                </div>
-            </section>
-            <section id="more">
-                <h3>more from yotube</h3>
-                <div class="content">
-                    <img src="img/earth-globe.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/earth-globe.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-            </section> 
-            <section id="misc">
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">settings</p>
-                </div>
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">settings</p>
-                </div>
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">settings</p>
-                </div>
-            </section>
-        </div>
+
+        <%- include('./includes/sidenav.ejs') %>
 
         <!-- end side nav -->
-
+        
         <!-- start modal -->
-        <div id="modal"></div>
+        <%- include('./includes/modal.ejs') %>
+            
         <!-- end modal -->
 
-         <!-- start navbar -->
-         <nav id="nav">
-            <div id="nav_right">
-                <img src="img/reorder-option.png" alt="" class="logo_menu nav_icons" id="humberger">
-                <div id="logo">
-                    <img src="img/youtube-logo.png" alt="" class="logo_icon nav_icons">
-                    <h2>youtube</h2>
-                </div>
-                
-            </div>
-            <div id="nav_center">
-                <div id="search">
-                    <input type="text" placeholder="search">
-                    <button><img src="/img/zoom-out.png" alt="" class="nav_icons"></button>
-                </div>
-                <img src="/img/microphone-black-shape.png" alt="" class="nav_icons">
-            </div>
-            <div id="nav_left">
-                <img src="/img/facetime-button.png" alt="" class="nav_icons">
-                <img src="/img/nine-black-tiles.png" alt="" class="nav_icons">
-                <img src="/img/musical-bell-outline.png" alt="" class="nav_icons">
-                <div id="user_icon">
-                    <img src="/img/art-2472892__340.webp" alt="">
-                </div>
-            </div>
-        </nav>
+        <!-- start navbar -->
+        <%- include('./includes/navbar.ejs') %>
+
 
         <!-- end navbar -->
+
+        <!-- start setting pop_up -->
+        <%- include('./includes/settingpopup.ejs') %>
+
+
+        <!-- end setting pop_up -->
+
+        
+
 
 
         <div class="subscription_main_container">
@@ -200,16 +60,16 @@
             </div> -->
 
             <div class="subscription_content">
-
+                <% for (let video of SubscribedVideos) { %>
                 <div class="subscription_video">
-                    <img src="/img/kiKoprGLT.jpg" alt="" class="subscription_video_thumbnail">
-                    <div class="subscription_video_duration">10:23</div>
+                    <img src="<%= video.Thumbnail %>" alt="" class="subscription_video_thumbnail">
+                    <div class="subscription_video_duration"><%= video.videoDuration %></div>
                     <div class="subscription_video_text">
-                        <div class="subscription_video_title">Lorem, ipsum dolor sit amet consectetur ...</div>
-                        <p class="subscription_video_channel">bensoul</p>
+                        <div class="subscription_video_title"><%= video.videoTitle %></div>
+                        <p class="subscription_video_channel"><%= video.channelTitle %></p>
                         <div class="subscription_video_info">
-                            <p class="subscription_video_viwes">422k views</p>
-                            <p class="subscription_video_age" >1 day ago</p>
+                            <p class="subscription_video_viwes"><%= video.views %> views</p>
+                            <p class="subscription_video_age" ><%= video.uploadTime %></p>
                         </div>
                         <!-- <div class="subscription_video_descriptipn">
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>
@@ -219,25 +79,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="subscription_video">
-                    <img src="/img/kiKoprGLT.jpg" alt="" class="subscription_video_thumbnail">
-                    <div class="subscription_video_duration">10:23</div>
-                    <div class="subscription_video_text">
-                        <div class="subscription_video_title">Lorem, ipsum dolor sit amet consectetur ...</div>
-                        <p class="subscription_video_channel">bensoul</p>
-                        <div class="subscription_video_info">
-                            <p class="subscription_video_viwes">422k views</p>
-                            <p class="subscription_video_age" >1 day ago</p>
-                        </div>
-                        <!-- <div class="subscription_video_descriptipn">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>
-                        </div> -->
-                        <div class="subscription_reminder_button">
-                            <button>set reminder</button>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
   
             </div>
             

@@ -730,6 +730,7 @@
         margin-left: 0;
         display: flex;
         justify-content: space-around;
+        align-content: center;
     }
     .logo_menu  {
         padding-left: 5px;
@@ -827,4 +828,128 @@
     .channel_stat {
         margin-top: 6px;
     }
+}
+
+@media screen and (min-width: 576px) && (max-width: 726px){ 
+    #nav_left {
+        display: block;
+    }
+    #nav_center {
+        width: 300px;
+    }
+    #logo {
+        margin-left: 10px;
+    }
+    #logo h2 {
+        font-size: 0.9rem;
+    }
+    .logo_menu {
+        height: 15px;
+    }
+    .nav_icons {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+    #search input {
+        width: 200px;
+    }
+    #nav_left {
+        width: 25%;
+        display: flex;
+        height: 6vh;
+        justify-content: space-between;
+    }
+
+
+    #arrows {
+        display: none;
+    }
+    #corousel_container {
+        display: none;
+    }
+    #side_menu {
+        display: none;
+    }
+    #main_container {
+        margin-left: 20px;
+        width: 100%;
+    }
+    #empty {
+        display: none;
+    }
+    #home_page_video_container {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 30px;
+        gap: 10px;
+    }
+    #thumbnail {
+        width: 130px;
+        height: 130px;
+    }
+    .video_length {
+        width: 35px;
+        font-size: 0.8rem;
+        position: relative;
+        top: -30px;
+        left: 84px;
+        background-color: rgb(10, 10, 10);
+        z-index: 1;
+        text-align: center;
+        padding: 0.3vh;
+        color: #fff;
+    }
+    .video_content {
+        width: 100%;
+    }
+    #channel_photo {
+        width: 30px;
+        height: 40px;
+        border-radius: 100%;
+        border: 1px solid black;
+        overflow: hidden;
+    }
+    #video_content_text {
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 60px 60px;
+    }
+
+    #whitespace {
+        display: none;
+    }
+
+    #video_title {
+        display: block;
+        /* margin-left: 25px; */
+        /* height: 25px; */
+    }
+
+    #video_title {
+        display: inline-block;
+    }
+    #channel_info {
+        font-size: 15px;
+        width: 90%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #channel_name .verified_icon {
+        width: 10px;
+        height: 10px;
+    }
+    .channel_stat {
+        margin-top: 6px;
+    }
+
+}
+
+@media screen and (min-width: 726px ){ 
+
+}
+
+@media screen and (min-width: 1024px ){ 
+
 }

@@ -293,3 +293,30 @@
         grid-template-columns: repeat(2,1fr);
     }
 }
+
+@media screen and (min-width: 576px ){ 
+    .subscription_main_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin-left: 15px;
+        margin-top: 70px;
+        /* overflow: hidden; */
+    }
+
+    .channel_content {
+        grid-row-start: 1;
+        margin: auto;
+        margin-bottom: 30px;
+
+    }
+
+    .history_videos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width: 726px ){
+    
+}

@@ -9,279 +9,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/main.css">
     </head>
-    <body>
-        <!-- start side menu -->
-        <!-- <div id="side_menu">
-            <div id="side_menu_home">
-                <img src="/img/camera-retro.png" alt="">
-                <p>home</p>
-            </div>
-            <div id="side_menu_trending">
-                <img src="/img/camera-retro.png" alt="">
-                <p>trending</p>
-            </div>
-            <div id="side_menu_subscription">
-                <img src="/img/camera-retro.png" alt="">
-                <p>subscriptions</p>
-            </div>
-            <div id="side_menu_library">
-                <img src="/img/camera-retro.png" alt="">
-                <p>library</p>
-            </div>
-        </div> -->
+    <body>              
 
-        <div id="side_menu">
-            <div id="side_menu_home">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/home" id="home_link">home</a>
-            </div>
-            <div id="side_menu_trending">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/trending" id="trending_link">trending</a>
-            </div>
-            <div id="side_menu_subscription">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/subscription" id="subscriptions_link">subscriptions</a>
-            </div>
-            <div id="side_menu_library">
-                <img src="/img/camera-retro.png" alt="">
-                <a href="/library" id="library_link">library</a>
-            </div>
-        </div>
+        <!-- start side menu -->
+
+        <%- include('./includes/sidemenu.ejs') %>
 
         <!-- end side menu -->
 
         <!-- start side nav -->
-        <div id="side_nav">
-            <section id="side_nav_logo">
-                <img src="img/reorder-option.png" alt="" id="side_nav_toggle">
-                <div id="side_nav_yt">
-                    <img src="img/youtube-logo.png" alt="" id="side_nav_img">
-                    <h2>youtube</h2>
-                </div>
-            </section>
-            <section id="menu">
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">home</p>
-                </div>
-                <div class="content">
-                    <img src="img/fluffy-cloud-silhouette.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">trending</p>
-                </div>
-                <div class="content">
-                    <img src="img/gittip-website-logo.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">subscription</p>
-                </div>
-            </section>
-            <section id="playlist">
-            <div class="content">
-                <img src="img/envelope.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">home</p>
-            </div>
-            <div class="content">
-                <img src="img/fluffy-cloud-silhouette.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">library</p>
-            </div>
-            <div class="content">
-                <img src="img/gittip-website-logo.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">your videos</p>
-            </div>
-            <div class="content">
-                <img src="img/envelope.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">watch later</p>
-            </div>
-            <div class="content">
-                <img src="img/fluffy-cloud-silhouette.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">war machines</p>
-            </div>
-            <div class="content">
-                <img src="img/angle-arrow-down.png" alt="" class="side_nav_icon">
-                <p class="side_nav_text">show more</p>
-            </div>
-            </section>
-            <section id="subscription">
-                <h3>subscription</h3>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/kiKoprGLT.jpg" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/angle-arrow-down.png" alt="" class="side_nav_icon side_nav_img">
-                    <p class="side_nav_text">show 498 more</p>
-                </div>
-            </section>
-            <section id="more">
-                <h3>more from yotube</h3>
-                <div class="content">
-                    <img src="img/earth-globe.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-                <div class="content">
-                    <img src="img/earth-globe.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">end of sentence</p>
-                </div>
-            </section> 
-            <section id="misc">
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">settings</p>
-                </div>
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">settings</p>
-                </div>
-                <div class="content">
-                    <img src="img/envelope.png" alt="" class="side_nav_icon">
-                    <p class="side_nav_text">settings</p>
-                </div>
-            </section>
-        </div>
+
+        <%- include('./includes/sidenav.ejs') %>
 
         <!-- end side nav -->
         <!-- start tag arrows -->
-        <div id="arrows">
-            <img src="/img/angle-pointing-to-left.png" alt="" class="arrow arrow_left">
-            <img src="/img/angle-arrow-pointing-to-right.png" alt="" class="arrow arrow_right">
-        </div> 
+        <%- include('./includes/arrows.ejs') %>
+        
         <!-- end tag arrows -->
         <!-- start modal -->
-            <div id="modal"></div>
+        <%- include('./includes/modal.ejs') %>
+            
         <!-- end modal -->
 
         <!-- start navbar -->
-        <nav id="nav">
-            <div id="nav_right">
-                <img src="img/reorder-option.png" alt="" class="logo_menu nav_icons" id="humberger">
-                <div id="logo">
-                    <img src="img/youtube-logo.png" alt="" class="logo_icon nav_icons">
-                    <h2>youtube</h2>
-                </div>
-                
-            </div>
-            <div id="nav_center">
-                <div id="search">
-                    <input type="text" placeholder="search">
-                    <button><img src="/img/zoom-out.png" alt="" class="nav_icons"></button>
-                </div>
-                <img src="/img/microphone-black-shape.png" alt="" class="nav_icons mic">
-            </div>
-            <div id="nav_left">
-                <img src="/img/facetime-button.png" alt="" class="nav_icons">
-                <img src="/img/nine-black-tiles.png" alt="" class="nav_icons">
-                <img src="/img/musical-bell-outline.png" alt="" class="nav_icons">
-                <div id="user_icon">
-                    <img src="/img/art-2472892__340.webp" alt="">
-                </div>
-            </div>
-        </nav>
+        <%- include('./includes/navbar.ejs') %>
+
 
         <!-- end navbar -->
 
         <!-- start setting pop_up -->
-        <div class="setting_pop_up">
-            <div class="account_info">
-                <img src="/img/art-2472892__340.webp" alt="">
-                <div class="account_data">
-                    <p class="account_name">myaccount</p>
-                    <p class="account_email">myaccount@gmail.com</p>
-                    <a href="" class="account_manage">Manage your google acount</a>
-                </div>
-            </div>
-            <div class="border"></div>
-            <div class="channel_setting">
-                <div class="channel">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Your channel</a>
-                </div>
-                <div class="purchases">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Purchases and membership</a>
-                </div>
-                <div class="studio">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Youtube studio</a>
-                </div>
-                <div class="switch">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Switch account</a>
-                    <img src="/img/angle-arrow-pointing-to-right.png" alt="" class="setting_icon setting_arrow"> 
-                </div>
-                <div class="signout">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Sign out</a>
-                </div>
-            </div>
-            <div class="border"></div>
-            <div class="device_setting">
-                <div class="appearance">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Appearance: Device theme</a>
-                    <img src="/img/angle-arrow-pointing-to-right.png" alt="" class="setting_icon setting_arrow"> 
-                </div>
-                <div class="language">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Language: English</a>
-                    <img src="/img/angle-arrow-pointing-to-right.png" alt="" class="setting_icon setting_arrow"> 
-                </div>
-                <div class="location">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Location:Kenya</a>
-                    <img src="/img/angle-arrow-pointing-to-right.png" alt="" class="setting_icon setting_arrow"> 
-                </div>
-                <div class="setting">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Setting</a>
-                    <img src="/img/angle-arrow-pointing-to-right.png" alt="" class="setting_icon setting_arrow"> 
-                </div>
-                <div class="data">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Your data in Youtube</a> 
-                </div>
-                <div class="help">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Help</a> 
-                </div>
-                <div class="feedback">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Send feedback</a> 
-                </div>
-                <div class="shortcuts">
-                    <img src="img/envelope.png" alt="" class="setting_icon">
-                    <a href="" class="seeting_text">Keyboard shortcuts</a> 
-                </div>
-            </div>
-            <div class="border"></div>
+        <%- include('./includes/settingpopup.ejs') %>
 
-        </div>
 
         <!-- end setting pop_up -->
 
@@ -329,91 +87,23 @@
             <div id="home_page_video_container">
                 <div id="empty"></div>
                  <!-- start home page video -->
+                <% for (let video of videos) { %>
                 <div class="video_content">
-                    <img src="/img/kiKoprGLT.jpg" alt="" id="thumbnail">
-                    <p class="video_length">18:90</p>
+                    <img src="<%= video.Thumbnail %>" alt="" id="thumbnail">
+                    <p class="video_length"><%= video.videoDuration %></p>
                     <div id="video_content_text">
                         <div id="channel_photo">
-                            <img src="/img/art-2472892__340.webp" alt="">
+                            <img src="<%= video.channelThumbnail %>" alt="">
                         </div>
-                        <div id="video_title">Quos officiis temporeunde distinctio</div>
+                        <div id="video_title" ><%= video.videoTitle %></div>
                         <div id="whitespace"></div>
                         <div id="channel_info">
-                            <p id="channel_name">end of sentence <img src="/img/checked-symbol.png" alt="" class="verified_icon"></p>
-                            <p class="channel_stat"><span id="views">347k views </span ><span id="dot" >.</span> <span id="upload_date">4 weeks ago</span></p>
+                            <p id="channel_name"><%= video.channelTitle %> <img src="/img/checked-symbol.png" alt="" class="verified_icon" <% if(!video.verified) { %> style="display: none;" <% }%></p>
+                            <p class="channel_stat"><span id="views"><%= video.views %> views </span ><span id="dot" >.</span> <span id="upload_date"><%= video.uploadTime %></span></p>
                         </div>
                     </div>
                 </div>
-                <!-- end home page video -->
-                <!-- start home page video -->
-                <div class="video_content">
-                    <img src="/img/background-618226__340.webp" alt="" id="thumbnail">
-                    <p class="video_length">18:90</p>
-                    <div id="video_content_text">
-                        <div id="channel_photo">
-                            <img src="/img/art-2472892__340.webp" alt="">
-                        </div>
-                        <div id="video_title">Quos officiis temporeunde distinctio</div>
-                        <div id="whitespace"></div>
-                        <div id="channel_info">
-                            <p id="channel_name">end of sentence <img src="/img/checked-symbol.png" alt="" class="verified_icon"></p>
-                            
-                            <p><span id="views">347k views </span ><span id="dot" >.</span> <span id="upload_date">4 weeks ago</span></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end home page video -->
-
-                <!-- start home page video -->
-                <div class="video_content">
-                    <img src="/img/background-618226__340.webp" alt="" id="thumbnail">
-                    <p class="video_length">18:90</p>
-                    <div id="video_content_text">
-                        <div id="channel_photo">
-                            <img src="/img/art-2472892__340.webp" alt="">
-                        </div>
-                        <div id="video_title">Quos officiis temporeunde distinctio</div>
-                        <div id="whitespace"></div>
-                        <div id="channel_info">
-                            <p id="channel_name">end of sentence </p>
-                            <p><span id="views">347k views </span ><span id="dot" >.</span> <span id="upload_date">4 weeks ago</span></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end home page video -->
-
-                <!-- start home page video -->
-                <div class="video_content">
-                    <img src="/img/kiKoprGLT.jpg" alt="" id="thumbnail">
-                    <div id="video_content_text">
-                        <div id="channel_photo">
-                            <img src="/img/art-2472892__340.webp" alt="">
-                        </div>
-                        <div id="video_title">Quos officiis temporeunde distinctio</div>
-                        <div id="whitespace"></div>
-                        <div id="channel_info">
-                            <p id="channel_name">end of sentence </p>
-                            <p><span id="views">347k views </span ><span id="dot" >.</span> <span id="upload_date">4 weeks ago</span></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- end home page video -->
-
-                <!-- start home page video -->
-                <div class="video_content">
-                    <img src="/img/kiKoprGLT.jpg" alt="" id="thumbnail">
-                    <div id="video_content_text">
-                        <div id="channel_photo">
-                            <img src="/img/art-2472892__340.webp" alt="">
-                        </div>
-                        <div id="video_title">Quos officiis temporeunde distinctio</div>
-                        <div id="whitespace"></div>
-                        <div id="channel_info">
-                            <p id="channel_name">end of sentence </p>
-                            <p><span id="views">347k views </span ><span id="dot" >.</span> <span id="upload_date">4 weeks ago</span></p>
-                        </div>
-                    </div>
-                </div>
+                <% } %>
                 <!-- end home page video -->
 
             </div>
