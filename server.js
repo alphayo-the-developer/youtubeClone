@@ -9,8 +9,10 @@ app.set('view engine','ejs');
 app.set('views','views');
 
 
-const videoRoutes = require('./routes/video')
+const videoRoutes = require('./routes/video');
+const channelRoutes = require('./routes/channel');
 
 app.use(videoRoutes);
+app.use(channelRoutes);
 
 app.listen(3000);
