@@ -89,17 +89,17 @@
                  <!-- start home page video -->
                 <% for (let video of videos) { %>
                 <div class="video_content">
-                    <img src="<%= video.Thumbnail %>" alt="" id="thumbnail">
-                    <p class="video_length"><%= video.videoDuration %></p>
+                    <img src="<%= video.thumbnail %>" alt="" id="thumbnail">
+                    <p class="video_length"><%= video.duration %></p>
                     <div id="video_content_text">
                         <div id="channel_photo">
-                            <img src="<%= video.channelThumbnail %>" alt="">
+                            <img src="<%= video.thumbnail %>" alt="">
                         </div>
-                        <div id="video_title" ><%= video.videoTitle %></div>
+                        <div id="video_title" > <form action="/watch/<%=video._id%>" method="get"> <button type="submit" class="title_btn"><%= video.title %></button> </form> </div>
                         <div id="whitespace"></div>
                         <div id="channel_info">
-                            <p id="channel_name"><%= video.channelTitle %> <img src="/img/checked-symbol.png" alt="" class="verified_icon" <% if(!video.verified) { %> style="display: none;" <% }%></p>
-                            <p class="channel_stat"><span id="views"><%= video.views %> views </span ><span id="dot" >.</span> <span id="upload_date"><%= video.uploadTime %></span></p>
+                            <p id="channel_name"><%= video.channel.name %><img src="/img/checked-symbol.png" alt="" class="verified_icon" <% if(!verified) { %> style="display: none;" <% }%></p>
+                            <p class="channel_stat"><span id="views"><%= video.views %> views </span ><span id="dot" >.</span> <span id="upload_date"><%= video.uploadDate %></span></p>
                         </div>
                     </div>
                 </div>

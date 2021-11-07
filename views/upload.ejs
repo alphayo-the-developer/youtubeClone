@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPLOAD</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    
+
+    <form  method="POST" action="/upload" enctype="multipart/form-data">
+        <label for="">Upload Thumbnail</label>
+        <input type="file" src="" alt="" name="thumbnail">
+
+        <label for="">Upload Video</label>
+        <input type="file" name="file" id="file">
+
+        <label for="">Add Title</label>
+        <input type="text" name="Title">
+
+        <!-- <input type="datetime-local" name="date" id=""> -->
+
+        <label for="">Add Description</label>
+        <input type="text" name="Description" id="">
+
+        <input type="submit" value="upload">
+    </form>
+
+</body>
+</html>
