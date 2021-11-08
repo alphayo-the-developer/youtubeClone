@@ -17,4 +17,8 @@ router.get('/subscription',channelsController.getSubscription);
 
 router.get('/library',channelsController.getLibrary);
 
+router.post('/searchvid',channelsController.searchVideos);
+
+
+
 module.exports = router;

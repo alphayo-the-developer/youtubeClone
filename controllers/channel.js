@@ -261,3 +261,21 @@ exports.createVideos = (req, res, next) => {
     //         console.log(err);
     //     })
 }
+
+
+
+exports.searchVideos = (req, res, next) => {
+
+    let payload = req.body.payload.trim();
+    console.log(payload)
+
+    Video.getVideosByNames(payload)
+    .then(videos => {
+      videos = videos.slice(0, 10)
+      res.send({payload:videos});
+    })
+    .catch(err => {
+      console.log(err);
+    });
+
+}

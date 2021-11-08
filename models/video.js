@@ -82,7 +82,6 @@ class Video {
       .find()
       .toArray()
       .then((videos) => {
-        console.log(videos)
         return videos;
       })
       .catch((err) => {
@@ -105,6 +104,21 @@ class Video {
       });
   }
   
+  static getVideosByNames(payload) {
+    // {$regex: new RegExp('^'+payload+'.*','i')}
+    const db = getDb();
+    return db
+      .collection("videos")
+      .find({title: {$regex: new RegExp('^'+payload+'.*','i')}})
+      .toArray()
+      .then((videos) => {
+        return videos;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   static countViews(){
 
   }

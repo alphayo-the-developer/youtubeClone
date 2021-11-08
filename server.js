@@ -1,19 +1,19 @@
 const express = require("express");
-const fs = require("fs");
+// const fs = require("fs");
 // const path = require('path');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const uuid = require('uui').v4;
-const getDb = require("./util/database").getDb;
+// const uuid = require('uui').v4;
+// const getDb = require("./util/database").getDb;
 const uploadVid = require("./util/uploadvideo");
 
 const mongodb = require("mongodb");
-const crypto = require('crypto');
+// const crypto = require('crypto');
 const path = require('path');
 // const mongoose = require('mongoose');
 const multer = require('multer');
-const {GridFsStorage} = require('multer-gridfs-storage');
-const Grid = require('gridfs-stream');
+// const {GridFsStorage} = require('multer-gridfs-storage');
+// const Grid = require('gridfs-stream');
 // const methodOverride = require('method-override');
 
 
@@ -25,7 +25,7 @@ const mongoConnect = require('./util/database').mongoConnect;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.json())
 app.use(methodOverride('_method'))
 app.set('view engine','ejs');
 app.set('views','views');
