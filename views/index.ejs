@@ -17,6 +17,13 @@
 
         <!-- end side menu -->
 
+         <!-- start serch pop up -->
+
+         <%- include('./includes/searchpopup.ejs') %>
+
+
+         <!-- end serch pop up -->
+
         <!-- start side nav -->
 
         <%- include('./includes/sidenav.ejs') %>
@@ -87,6 +94,7 @@
             <div id="home_page_video_container">
                 <div id="empty"></div>
                  <!-- start home page video -->
+                <% if (videos.length > 0) { %>
                 <% for (let video of videos) { %>
                 <div class="video_content">
                     <img src="<%= video.thumbnail %>" alt="" id="thumbnail">
@@ -104,7 +112,10 @@
                     </div>
                 </div>
                 <% } %>
-                <!-- end home page video -->
+                <% } else { %>
+                    <h1>No videos for that search </h1>     
+                <% } %>
+                    <!-- end home page video -->
 
             </div>
             <!-- end home page video  containner-->

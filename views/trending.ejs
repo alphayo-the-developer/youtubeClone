@@ -67,14 +67,14 @@
             <% for (let video of TrendingVideos) { %>
             <div id="trending_border_btm"></div>
             <div class="trending_video">
-                <img src="<%= video.Thumbnail %>" alt="" class="trending_video_thumbnail">
-                <div class="trending_video_duration"><%= video.videoDuration %></div>
+                <img src="<%= video.thumbnail %>" alt="" class="trending_video_thumbnail">
+                <div class="trending_video_duration"><%= video.duration %></div>
                 <div class="trending_video_text">
-                    <div class="trending_video_title"><%= video.videoTitle %></div>
+                    <div class="trending_video_title"><%= video.title %></div>
                     <div class="trending_video_info">
                         <p class="trending_video_channel"><%= video.channelTitle %></p>
                         <p class="trending_video_viwes"><%= video.views %> views</p>
-                        <p class="trending_video_age" ><%= video.uploadTime %></p>
+                        <p class="trending_video_age" ><%= video.uploadDate %></p>
                     </div>
                     <div class="trending_video_descriptipn">
                         <p><%= video.description %></p>

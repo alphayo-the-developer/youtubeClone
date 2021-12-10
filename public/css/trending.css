@@ -66,6 +66,8 @@
 
 .trending_video_info {
     display: flex;
+    justify-content: space-between;
+    width: 50%;
     padding-top: 5px;
 }
 
@@ -108,7 +110,11 @@
         padding: 3px;
         color: #fff;
     }
+    .trending_video_info {
+        width: 100%;
+    }
     .trending_video_info p{
         padding-right: 5px;
     }
+    
 }

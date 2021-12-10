@@ -2,9 +2,15 @@ const Video = require('../models/video');
 const fs = require("fs");
 
 exports.getWatch = (req, res, next) => {
-    res.render("watch",{
-        video : req.params.videoId
-    });
+    let id =  req.params.videoId;
+    Video.getVideo(id)
+    .then(video => {
+        res.render("watch",{
+            video : id,
+            videoDetail: video
+        });    
+    })
+    
 }
 
 exports.getVideo = (req, res, next) => {

@@ -269,7 +269,7 @@
 
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 576px){
+@media screen and (max-width: 726px){
     .subscription_main_container{
         display: grid;
         grid-template-columns: 1fr;
@@ -294,14 +294,14 @@
     }
 }
 
-@media screen and (min-width: 576px ){ 
+/* @media screen and (min-width: 576px ){ 
     .subscription_main_container {
         display: grid;
         grid-template-columns: 1fr;
         width: 80%;
         margin-left: 15px;
         margin-top: 70px;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
 
     .channel_content {
@@ -316,7 +316,7 @@
         grid-template-columns: repeat(2,1fr);
     }
 }
-
-@media screen and (min-width: 726px ){
+*/
+/* @media screen and (max-width: 726px ){
     
-}
+}  */

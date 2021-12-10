@@ -63,22 +63,22 @@
         <div id="watch_main_container">
             <div id="watch_left">
                 <video src="/video/<%=video%>" controls id="video" class="screen" poster="../img/poster.png" autoplay type="video/mp4"></video>
-                <div id="watch_video_title">Lorem ipsum dolor sit amet consectetu</div>
+                <div id="watch_video_title"><%= videoDetail.title %></div>
                 <div class="watch_video_info1">
                     <div class="watch_video_info_data">
-                        <p class="views" id="views">512,905 views</p>
+                        <p class="views" id="views"><%= videoDetail.views %> views</p>
                         <div class="dot">.</div>
-                        <p class="upload_date">sep 8, 2019</p>
+                        <p class="upload_date"><%= videoDetail.uploadDate %></p>
                     </div>
                     <div></div>
                     <div class="watch_video_icons">
                         <div class="likes">
                             <img src="/img/thumbs-up-hand-symbol.png" alt="" class="icons">
-                            <p>10k</p>
+                            <p><%= videoDetail.likes %></p>
                         </div>
                         <div class="dislike">
                             <img src="/img/thumbs-down-silhouette.png" alt="" class="icons">
-                            <p>592</p>
+                            <p><%= videoDetail.dislikes%></p>
                         </div>
                         <div class="share">
                             <img src="/img/reply.png" alt="" class="icons">
@@ -116,13 +116,14 @@
                 </div>
                 <div class="add_comment">
                     <img src="/img/background-618226__340.webp" alt="">
-                    <form action="" class="add_comment_form">
+                    <form action="/" class="add_comment_form">
                         <input type="text" placeholder="Add a public comment...">
+                        <input type="text" value="<%=video%>" hidden>
                         <button class="add_comment_btn">comment</button>
                     </form>
                 </div>
                 <div class="comments">
-                    <div class="comment">
+                    <!-- <div class="comment">
                         <img src="/img/background-618226__340.webp" alt="" class="comment_thumbnail">
                         <div class="comment_data">
                             <p class="comment_user">mac Bumblebee <span class="comment_date">1 year ago</span></span></p>
@@ -135,11 +136,12 @@
                                 <div class="comment_dislike">
                                     <img src="/img/thumbs-down-silhouette.png" alt="" class="icons">
                                     <!-- <p>592</p> -->
-                                </div>
+                                <!-- </div>
                                 <button >REPLY</button>
                             </div>
                             <form action="" class="reply_form">
                                 <input type="text" class="reply_input">
+                                <input type="text" value="dgdncdhd" hidden>
                                 <input type="submit" value="Reply" class="reply_submit">
                             </form>
                             <button class="replies_btn" id="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View 2 Reply</button>
@@ -156,7 +158,7 @@
                                             </div>
                                             <div class="comment_dislike">
                                                 <img src="/img/thumbs-down-silhouette.png" alt="" class="icons">
-                                                <!-- <p>592</p> -->
+                                                
                                             </div>
                                             <button class="comment_reply" >REPLY</button>
                                             
@@ -164,14 +166,14 @@
                                         <form action="" class="reply_form">
                                             <input type="text" class="reply_input">
                                             <input type="submit" value="Reply" class="reply_submit">
-                                        </form>
+                                        </form> -->
                                         <!-- <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button> -->
-                                    </div>
+                                    <!-- </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="comment">
+                    </div> -->
+                    <!-- <div class="comment">
                         <img src="/img/background-618226__340.webp" alt="" class="comment_thumbnail">
                         <div class="comment_data">
                             <p class="comment_user">mac Bumblebee <span class="comment_date">1 year ago</span></span></p>
@@ -183,7 +185,7 @@
                                 </div>
                                 <div class="comment_dislike">
                                     <img src="/img/thumbs-down-silhouette.png" alt="" class="icons">
-                                    <!-- <p>592</p> -->
+                                
                                 </div>
                                 <button >REPLY</button>
                             </div>
@@ -201,16 +203,16 @@
                                             </div>
                                             <div class="comment_dislike">
                                                 <img src="/img/thumbs-down-silhouette.png" alt="" class="icons">
-                                                <!-- <p>592</p> -->
+                                                
                                             </div>
                                             <button class="comment_reply" >REPLY</button>
                                         </div>
-                                        <!-- <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button> -->
+                                       <button class="replies_btn"> <img src="/img/angle-arrow-down.png" alt="" class="comment_icon"> View Reply</button> 
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div id="watch_right">

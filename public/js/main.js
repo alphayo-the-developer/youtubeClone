@@ -19,16 +19,7 @@ modal.addEventListener('click', () => {
     sideNav.style.display = 'none';
 })
 
-function SearchPopup() {
-    search = document.querySelector('#search input');
-    suggetion = document.querySelector('.serch_pop_up');
-    
-    search.addEventListener('click', () => {
-        suggetion.style.display = 'block';
-    });   
-};
 
-SearchPopup()
 
 
 function SettingPopup() {

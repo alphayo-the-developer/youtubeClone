@@ -63,13 +63,13 @@
                 <% for (let video of SubscribedVideos) { %>
                 <div class="subscription_video">
                     <img src="<%= video.Thumbnail %>" alt="" class="subscription_video_thumbnail">
-                    <div class="subscription_video_duration"><%= video.videoDuration %></div>
+                    <div class="subscription_video_duration"><%= video.duration %></div>
                     <div class="subscription_video_text">
-                        <div class="subscription_video_title"><%= video.videoTitle %></div>
+                        <div class="subscription_video_title"><%= video.title %></div>
                         <p class="subscription_video_channel"><%= video.channelTitle %></p>
                         <div class="subscription_video_info">
                             <p class="subscription_video_viwes"><%= video.views %> views</p>
-                            <p class="subscription_video_age" ><%= video.uploadTime %></p>
+                            <p class="subscription_video_age" ><%= video.uploadDate %></p>
                         </div>
                         <!-- <div class="subscription_video_descriptipn">
                             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit</p>

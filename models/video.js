@@ -1,5 +1,7 @@
 const mongodb = require("mongodb");
 const getDb = require("../util/database").getDb;
+var ObjectId = require('mongodb').ObjectId;
+
 
 
 const crypto = require('crypto');
@@ -13,7 +15,7 @@ const methodOverride = require('method-override');
 
 
 class Video {
-  constructor(thumbnail, duration, channel,title,description, comments, views,likes, userId, uploadDate, location) {
+  constructor(thumbnail, duration, channel,title,description, comments, views,likes, userId, uploadDate, location,  dislikes) {
     this.thumbnail = thumbnail;
     this.duration = duration;
     this.channel = channel;
@@ -25,7 +27,7 @@ class Video {
     this.userId = userId;
     this.uploadDate = uploadDate;
     this.location = location;
-
+    this.dislikes = dislikes;
   }
 
   save() {
@@ -44,8 +46,7 @@ class Video {
   static upload(){
 
         
-    const db = getDb();
-    console.log(db)
+    
     
     var gfs = Grid(db, mongodb);
     gfs.collection('uploads');
@@ -90,6 +91,7 @@ class Video {
   }
 
   static getVideo(videoId){
+    this.countViews(videoId)
     const db = getDb();
     return db
       .collection("videos")
@@ -119,27 +121,43 @@ class Video {
       });
   }
 
-  static countViews(){
-
+  static countViews(id){
+    const db = getDb();
+    db.collection("videos").updateOne(
+      { _id: ObjectId(id) },
+      {
+        $inc: { "views": 1},
+        $currentDate: { lastModified: true }
+      }
+  )
   }
 
-  static countLikes(){
-
+  static countLikes(id){
+    const db = getDb();
+    db.collection("videos").updateOne(
+      { _id: ObjectId(id) },
+      {
+        $inc: { "likes": 1},
+        $currentDate: { lastModified: true }
+      }
+  )
   }
 
   static countDislikes(){
+    const db = getDb();
+    db.collection("videos").updateOne(
+      { _id: ObjectId(id) },
+      {
+        $inc: { "likes": 1},
+        $currentDate: { lastModified: true }
+      }
+  )
+
+
 
   }
 
-  static getUploadDate(){
-
-  }
-
-  static getDescription() {
-
-  }
-
-  static getComments() {
+  static setDescription() {
 
   }
 }

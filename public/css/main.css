@@ -705,6 +705,7 @@
 .sugestion p {
     font-size: 12px;
     font-weight: 600;
+    cursor: pointer;
     
 }
 
@@ -742,14 +743,27 @@
     .logo_menu  {
         padding-left: 5px;
     }
+    
     #nav_center {
-        margin-left: 50px;
+        margin-left: 20px;
     }
     #nav_center .mic{
         display: none;
     }
     #nav_left {
+        /* display: none; */
+    }
+    #nav_left .nav_icons {
         display: none;
+    }
+    #nav_left #upload_btn {
+        display: block;
+        transform: translateX(-10px) translateY(3px);
+    }
+    #upload_btn:hover #upload_btn::after{
+        content: "upload videos";
+        position: fixed;
+        top: 10px;
     }
     #search input{
         width: 70%;
@@ -837,7 +851,7 @@
     }
 }
 
-@media screen and (min-width: 576px) && (max-width: 726px){ 
+@media  (min-width: 576px) and (max-width: 726px){ 
     #nav_left {
         display: block;
     }

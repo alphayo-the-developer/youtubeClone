@@ -1,22 +1,22 @@
 <!-- start navbar -->
 <nav id="nav">
     <div id="nav_right">
-        <img src="img/reorder-option.png" alt="" class="logo_menu nav_icons" id="humberger">
+        <img src="/img/reorder-option.png" alt="" class="logo_menu nav_icons" id="humberger">
         <div id="logo">
-            <img src="img/youtube-logo.png" alt="" class="logo_icon nav_icons">
+            <img src="/img/youtube-logo.png" alt="" class="logo_icon nav_icons">
             <h2>youtube</h2>
         </div>
         
     </div>
-    <form id="nav_center">
-        <div id="search">
-            <input type="text" placeholder="search" id="vidsearch">
-            <button type="submit"><img src="/img/zoom-out.png" alt="" class="nav_icons"></button>
+    <div id="nav_center">
+        <form action="/searchvid" id="search">
+            <input type="text" placeholder="search" id="vidsearch" name="search" autocomplete="off">
+            <button type="submit"><img src="/img/zoom-out.png" alt="" class="nav_icons" id="searchBtn"></button>
         </form>
         <img src="/img/microphone-black-shape.png" alt="" class="nav_icons mic">
     </div>
     <div id="nav_left">
-        <img src="/img/facetime-button.png" alt="" class="nav_icons">
+        <a href="/upload"><img src="/img/facetime-button.png" alt="" class="nav_icons" id="upload_btn"></a>
         <img src="/img/nine-black-tiles.png" alt="" class="nav_icons">
         <img src="/img/musical-bell-outline.png" alt="" class="nav_icons">
         <div id="user_icon">

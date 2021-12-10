@@ -1,9 +1,10 @@
 const Video = require('../models/video');
+const Comment = require('../models/comments');
 const mongodb = require("mongodb");
-const getDb = require("../util/database").getDb;
-const fs = require('fs');
-const multer = require('multer');
-var formidable = require('formidable');
+// const getDb = require("../util/database").getDb;
+// const fs = require('fs');
+// const multer = require('multer');
+// var formidable = require('formidable');
 // const mongodb = require('mongodb');
 
 
@@ -27,169 +28,44 @@ exports.getIndex = (req, res, next) => {
 
 
 exports.getTrending = (req, res, next) => {
-    res.render('trending', {
-        TrendingVideos:[{
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago',
-            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago',
-            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago',
-            description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente explicabo blanditiis, officiis atque quibusdam non, numquam dicta archit'
-        }]})
+    
+    Video.getAllVideos()
+    .then(videos => {
+      res.render('trending', {
+        TrendingVideos: videos
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+    
 }
 
+
 exports.getSubscription = (req, res, next) => {
-    res.render('subscriptions', {
-        SubscribedVideos:[{
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        }]})
+    Video.getAllVideos()
+    .then(videos => {
+      res.render('subscriptions', {
+        SubscribedVideos: videos
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
 
 exports.getLibrary = (req, res, next) => {
-    res.render('library', {
-        WatchedVideos:[{
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        }],
-        WatchLaterVideos:[{
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        }],
-        LikedVideos:[{
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        },
-        {
-            Thumbnail:'/img/kiKoprGLT.jpg',
-            videoDuration: '18:90',
-            channelThumbnail:'/img/art-2472892__340.webp',
-            videoTitle:'Quos officiis temporeunde distinctio',
-            channelTitle:'end of sentence',
-            verified: true,
-            views:'300k',
-            uploadTime:'4 weeks ago'
-        }],
+    Video.getAllVideos()
+    .then(videos => {
+      res.render('library', {
+        WatchedVideos: videos,
+        LikedVideos:videos,
+        WatchLaterVideos:videos
+      });
     })
+    .catch(err => {
+      console.log(err);
+    });
 }
 
 exports.uploadVideos = (req, res, next) => {
@@ -200,20 +76,8 @@ exports.uploadVideos = (req, res, next) => {
 
 
 exports.createVideos = (req, res, next) => {
-        // console.log(req.body)
-
-        // var form = new formidable.IncomingForm();
-        // form.parse(req, function (err, fields, files) {
-        //     var oldpath = files.filetoupload.path;
-        //     console.log(oldpath);
-            // var newpath = 'E:\portfolio\youtube clone - Copy\data' + files.filetoupload.name;
-            // fs.rename(oldpath, newpath, function (err) {
-            //     next()
-            // })
-        
-        // });
-        
-        res.json({a:'d'});
+    console.log(req.file)
+    res.redirect('/')
         
     
  
@@ -250,24 +114,30 @@ exports.createVideos = (req, res, next) => {
   
 
 
-    // const video = new Video("title", "price", "description", "imageUrl","dff", "dff","ddd","df");
-    // video.save()
-    //     .then((result) => {
-    //         // console.log(result);
-    //         console.log("Created Product");
-    //         res.redirect("/admin/add-product");
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     })
+    
 }
 
 
+exports.searchVideos = (req,res,next) => {
+    let payload = req.query.search;
+    console.log(payload)
+    Video.getVideosByNames(payload)
+    .then(vidz => {
+        res.render('index',{
+          videos:vidz,
+          verified: true,
+        });
+    
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
 
-exports.searchVideos = (req, res, next) => {
+
+exports.searchVideoSuggest = (req, res, next) => {
 
     let payload = req.body.payload.trim();
-    console.log(payload)
 
     Video.getVideosByNames(payload)
     .then(videos => {
@@ -278,4 +148,52 @@ exports.searchVideos = (req, res, next) => {
       console.log(err);
     });
 
+}
+
+exports.createComment = (req,res,next) => {
+    let payload = req.body.payload.trim();
+    let id = req.body.id.trim();
+    const comment = new Comment(id, payload)
+    comment.createComment()
+    .then((result) => {
+        console.log("Added Comment");
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+    res.status('200')
+}
+
+exports.createReply = (req,res,next) => {
+    let payload = req.body.payload.trim();
+    let id = req.body.id.trim();
+    console.log(req.body)
+    Comment.addReplies(id,payload);
+}
+
+exports.getComments = (req,res,next) => {
+    Comment.fetchAllComments().
+    then((comments) => {
+        // console.log(comments)
+        res.json({coments:comments})
+    }).catch((err) => {
+        console.log(err)
+    })
+}
+
+exports.getReplies = (req,res,next) => {
+    id = req.body.replyId;
+    Comment.fetchReplies(id)
+    .then((replies) => {
+        // console.log(comments)
+        res.json({replies:replies})
+    }).catch((err) => {
+        console.log(err)
+    })
+}
+
+exports.addCommentLikes = (req,res,next) => {
+    id = req.body.id;
+    Comment.setLikeCount(id)
+    
 }
