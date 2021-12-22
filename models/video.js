@@ -1,6 +1,7 @@
 const mongodb = require("mongodb");
 const getDb = require("../util/database").getDb;
 var ObjectId = require('mongodb').ObjectId;
+const fs = require("fs")
 
 
 
@@ -90,7 +91,8 @@ class Video {
       });
   }
 
-  static getVideo(videoId){
+
+  static getWatch(videoId){
     this.countViews(videoId)
     const db = getDb();
     return db
@@ -100,6 +102,39 @@ class Video {
       .then((video) => {
         // console.log(video);
         return video;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+  }
+  static getVideo(videoId){
+    this.countViews(videoId)
+    
+    const db = getDb();
+    db.collection("fs.files")
+    
+    // return db
+    //   .collection("videos")
+    //   .find({ _id: new mongodb.ObjectId(videoId) })
+    //   .next()
+    //   .then((video) => {
+    //     // console.log(video);
+    //     return video;
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    return db.collection("fs.files").findOne({ _id: new mongodb.ObjectId("61883d10eeb0e41cd18b55e8") })
+    
+      .then((video) => {
+        const bucket = new mongodb.GridFSBucket(db);
+        const downloadStream = bucket.openDownloadStream(new mongodb.ObjectId("61883d10eeb0e41cd18b55e8"))
+        .pipe(fs.createWriteStream('./outputFile.mkv'));
+        // return {b:bucket,n:video.filename};
+
+        return downloadStream
       })
       .catch((err) => {
         console.log(err);
