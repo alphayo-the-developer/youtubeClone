@@ -13,24 +13,24 @@ const GridFsStorage = require('multer-gridfs-storage');
 request = require('request');
 
 
-var S3 = require('aws-sdk').S3,
-    S3S = require('s3-streams');
+// var S3 = require('aws-sdk').S3,
+//     S3S = require('s3-streams');
 
 
 
 const mongoURI = 'mongodb://127.0.0.1:27017/';
 
-// Create mongo connection
-const conn = mongoose.createConnection(mongoURI);
+// // Create mongo connection
+// const conn = mongoose.createConnection(mongoURI);
 
-// Init gfs
-let gfs;
+// // Init gfs
+// let gfs;
 
-conn.once('open', () => {
-  // Init stream
-  gfs = Grid(conn.db, mongoose.mongo);
-  gfs.collection('videos');
-});
+// conn.once('open', () => {
+//   // Init stream
+//   gfs = Grid(conn.db, mongoose.mongo);
+//   gfs.collection('videos');
+// });
 
 
 
@@ -140,14 +140,18 @@ exports.getWatch = (req, res, next) => {
 // }
 
 exports.getVideo = (req, res, next) => {
-    var S3 = require('aws-sdk').S3,
-    S3S = require('s3-streams');
+    // var S3 = require('aws-sdk').S3,
+    // S3S = require('s3-streams');
  
     // var download = S3S.ReadStream(new S3(), {
     //     Bucket: 'youtubeclonevideos',
     //     Key: '86806d4f-0e61-4683-a75d-6857fa986cc4.mp4',
     //     // Any other AWS SDK options
     // });
-    request('https://youtubeclonevideos.s3.us-east-2.amazonaws.com/86806d4f-0e61-4683-a75d-6857fa986cc4.mp4').pipe(res)
+    request('https://youtubeclonevideos.s3.us-east-2.amazonaws.com/52d268ff-6043-4930-87ef-f80f717c4814.mp4').pipe(res)
     // download.pipe(res)
+}
+
+exports.editVideo = (req, res, next) => {
+
 }

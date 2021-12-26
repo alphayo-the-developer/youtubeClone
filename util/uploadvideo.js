@@ -36,13 +36,13 @@ uploadVid = (location) => {
 
 
   
-    newlocation = `./uploads/${location}`
+    
 
-    const video = new Video("title", "price", "description", "imageUrl","video2", "dff","ddd","ff","dff","ddd",newlocation);
+    const video = new Video("title", "price", "description", "imageUrl","video2", "dff","ddd","ff","dff","ddd",location);
     video.save()
         .then((result) => {
             // console.log(result);
-            console.log("Created Product");
+            console.log("Created video");
             // res.redirect("/admin/add-product");
         })
         .catch((err) => {

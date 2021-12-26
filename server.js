@@ -3,6 +3,7 @@ const express = require("express");
 // const path = require('path');
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
+const Video = require('./models/video');
 // const uuid = require('uui').v4;
 // const getDb = require("./util/database").getDb;
 const uploadVid = require("./util/uploadvideo");
@@ -107,9 +108,15 @@ const storage = new GridFsStorage({
 
 app.use(
   "/upload",
-  uploadS3.single("thumbnail"),
+  uploadS3.single("file"),
   (req, res, next) => {
-    res.redirect('/')
+    Video.getAllVideos()
+    .then(videos => {
+      res.render('upload',{
+        videos:videos
+      })    
+    })
+    
   }
 );
 
