@@ -8,7 +8,7 @@ const mongoConnect = (callback) => {
   mongoClient.connect('mongodb+srv://user1:manchester237@node-course.hmo89.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then( client => {
     console.log('connected');
-    db = client.db("myFirstDatabase");
+    db = client.db("youtube");
     callback()
   })
   .catch( err => {
