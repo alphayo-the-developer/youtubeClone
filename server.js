@@ -126,6 +126,7 @@ app.use((req, res, next) => {
 
 mongoConnect((client) => {
   app.listen(port);
+  console.log(`listeng on port ${port}`)
 });
 
 // app.listen(3000);
